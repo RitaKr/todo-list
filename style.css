@@ -1,0 +1,53 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+h1 {
+  margin: 10px;
+  padding: 20px;
+  font-size: 2.5em;
+  color: #3a7064;
+  border-bottom: solid 4px #3a7064;
+}
+#main {
+  padding: 40px;
+}
+input[type="text"] {
+  padding: 10px;
+}
+#add {
+  padding: 10px 25px;
+  border: solid 3px #3a7064;
+  background: none;
+  border-radius: 18px;
+  color: #3a7064;
+  font-weight: bold;
+}
+#add:hover {
+  animation: back 0.3s ease-out;
+}
+@keyframes back {
+  from {
+    background: linear-gradient(to right, #3a7064 20%, transparent 20%);
+  }
+  20% {
+    background: linear-gradient(to right, #3a7064 40%, transparent 40%);
+  }
+  40% {
+    background: linear-gradient(to right, #3a7064 60%, transparent 60%);
+    color: white;
+  }
+  60% {
+    background: linear-gradient(to right, #3a7064 80%, transparent 80%);
+    color: white;
+  }
+  80% {
+    background: linear-gradient(to right, #3a7064 100%, transparent 100%);
+    color: white;
+  }
+  to {
+    background: linear-gradient(to right, #3a7064 100%, transparent 100%);
+    color: white;
+  }
+}
