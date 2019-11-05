@@ -4,50 +4,53 @@
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 h1 {
-  margin: 10px;
+  margin: 0 20px;
   padding: 20px;
   font-size: 2.5em;
   color: #3a7064;
   border-bottom: solid 4px #3a7064;
 }
 #main {
-  padding: 40px;
+  margin: 0 20px;
+  padding: 20px 60px;
+  background: #4a5766;
+  border-top: solid 3px white;
 }
 input[type="text"] {
   padding: 10px;
 }
 #add {
   padding: 10px 25px;
-  border: solid 3px #3a7064;
+  border: solid 3px white;
   background: none;
   border-radius: 18px;
-  color: #3a7064;
+  color: white;
   font-weight: bold;
 }
 #add:hover {
-  animation: back 0.3s ease-out;
+  animation: back 0.3s ease-out forwards;
 }
 @keyframes back {
   from {
-    background: linear-gradient(to right, #3a7064 20%, transparent 20%);
+    background: linear-gradient(to right, white 20%, transparent 20%);
   }
   20% {
-    background: linear-gradient(to right, #3a7064 40%, transparent 40%);
+    background: linear-gradient(to right, white 40%, transparent 40%);
   }
   40% {
-    background: linear-gradient(to right, #3a7064 60%, transparent 60%);
-    color: white;
+    background: linear-gradient(to right, white 60%, transparent 60%);
+    color: #3a7064;
   }
   60% {
-    background: linear-gradient(to right, #3a7064 80%, transparent 80%);
-    color: white;
+    background: linear-gradient(to right, white 80%, transparent 80%);
+    color: #3a7064;
   }
   80% {
-    background: linear-gradient(to right, #3a7064 100%, transparent 100%);
-    color: white;
+    background: linear-gradient(to right, white 100%, transparent 100%);
+    color: #3a7064;
   }
   to {
-    background: linear-gradient(to right, #3a7064 100%, transparent 100%);
-    color: white;
+    background: linear-gradient(to right, white 100%, transparent 100%);
+    color: #3a7064;
   }
 }
