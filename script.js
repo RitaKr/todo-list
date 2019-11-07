@@ -16,4 +16,3 @@ let tasks = [
     console.log("hi");
   }
   name();*/
-alert("hi");
