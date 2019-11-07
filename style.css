@@ -5,10 +5,16 @@
 }
 h1 {
   margin: 0 20px;
-  padding: 20px;
-  font-size: 2.5em;
-  color: #3a7064;
-  border-bottom: solid 4px #3a7064;
+  padding: 20px 20px 0px 20px;
+  font-size: 2.6em;
+  color: #9b5570;
+}
+h3 {
+  margin: 0 20px;
+  padding: 0 20px 10px 20px;
+  font-size: 1.25em;
+  color: #9b5570;
+  border-bottom: solid 4px #9b5570;
 }
 #main {
   margin: 0 20px;
@@ -18,6 +24,12 @@ h1 {
 }
 input[type="text"] {
   padding: 10px;
+  background: none;
+  color: white;
+  border: 2px white solid;
+}
+input[type="text"]::placeholder {
+  color: rgba(255, 255, 255, 0.8);
 }
 #add {
   padding: 10px 25px;
@@ -39,18 +51,18 @@ input[type="text"] {
   }
   40% {
     background: linear-gradient(to right, white 60%, transparent 60%);
-    color: #3a7064;
+    color: #9b5570;
   }
   60% {
     background: linear-gradient(to right, white 80%, transparent 80%);
-    color: #3a7064;
+    color: #9b5570;
   }
   80% {
     background: linear-gradient(to right, white 100%, transparent 100%);
-    color: #3a7064;
+    color: #9b5570;
   }
   to {
     background: linear-gradient(to right, white 100%, transparent 100%);
-    color: #3a7064;
+    color: #9b5570;
   }
 }
