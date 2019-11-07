@@ -3,66 +3,88 @@
   padding: 0;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
+header {
+  margin: 0 0px;
+  padding: 20px 20px 20px 60px;
+  background: linear-gradient(to bottom right, #9b5570, #9b5570);
+  border-bottom: solid 5px white;
+}
 h1 {
-  margin: 0 20px;
-  padding: 20px 20px 0px 20px;
-  font-size: 2.6em;
-  color: #9b5570;
+  padding: 0;
+  font-size: 3em;
+  color: white;
+  text-shadow: 0px 3px 6px rgba(255, 255, 255, 2);
 }
 h3 {
-  margin: 0 20px;
-  padding: 0 20px 10px 20px;
+  padding: 0;
   font-size: 1.25em;
-  color: #9b5570;
-  border-bottom: solid 4px #9b5570;
+  color: white;
 }
-#main {
-  margin: 0 20px;
-  padding: 20px 60px;
-  background: #4a5766;
-  border-top: solid 3px white;
+.main {
+  margin: 0;
+  padding: 20px 80px;
+  background: white;
+  border-top: solid 5px #3a4569;
+  display: flex;
+  flex-direction: column;
 }
 input[type="text"] {
   padding: 10px;
   background: none;
-  color: white;
-  border: 2px white solid;
+  color: #9b5570;
+  border: 2px transparent dotted;
+  border-bottom: 2px #9b5570 dotted;
 }
-input[type="text"]::placeholder {
-  color: rgba(255, 255, 255, 0.8);
+input[type="text"]:focus {
+  outline: none;
+  border: 2px #9b5570 solid;
+}
+textarea {
+  display: block;
+  margin: 15px 0px;
+  padding: 10px;
+  border: 1px #9b5570 solid;
+}
+input[type="text"]::placeholder,
+textarea::placeholder {
+  color: #9b557088;
 }
 #add {
-  padding: 10px 25px;
-  border: solid 3px white;
+  padding: 10px 30px;
+  border: solid 3px #9b5570;
   background: none;
   border-radius: 18px;
-  color: white;
+  color: #9b5570;
   font-weight: bold;
+  font-size: 1em;
+}
+#add:focus {
+  outline: none;
 }
 #add:hover {
   animation: back 0.3s ease-out forwards;
 }
 @keyframes back {
   from {
-    background: linear-gradient(to right, white 20%, transparent 20%);
+    background: linear-gradient(to right, #9b5570 20%, transparent 20%);
   }
   20% {
-    background: linear-gradient(to right, white 40%, transparent 40%);
+    background: linear-gradient(to right, #9b5570 40%, transparent 40%);
   }
   40% {
-    background: linear-gradient(to right, white 60%, transparent 60%);
-    color: #9b5570;
+    background: linear-gradient(to right, #9b5570 60%, transparent 60%);
+    color: white;
   }
   60% {
-    background: linear-gradient(to right, white 80%, transparent 80%);
-    color: #9b5570;
+    background: linear-gradient(to right, #9b5570 80%, transparent 80%);
+    color: white;
   }
   80% {
-    background: linear-gradient(to right, white 100%, transparent 100%);
-    color: #9b5570;
+    background: linear-gradient(to right, #9b5570 100%, transparent 100%);
+    color: white;
   }
   to {
-    background: linear-gradient(to right, white 100%, transparent 100%);
-    color: #9b5570;
+    background: linear-gradient(to right, #9b5570 100%, transparent 100%);
+    color: white;
   }
 }

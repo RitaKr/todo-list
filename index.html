@@ -6,14 +6,24 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <h1>Todo list</h1>
-    <h3>My app Todo helps you to plan your life and live good</h3>
-    <div id="main">
-      <form id="">
-        <input type="text" placeholder="Enter title" id="title" />
-        <input type="text" placeholder="Enter description" id="descr" />
-        <button type="submit" id="add">Add</button>
-      </form>
+    <div class="container">
+      <header>
+        <h1>Todo list</h1>
+        <h3>My app Todo helps you to plan your life and live good</h3>
+      </header>
+
+      <div class="main">
+        <form id="">
+          <input type="text" placeholder="Enter title" id="title" />
+          <textarea
+            placeholder="Enter description"
+            id="descr"
+            cols="45"
+            rows="8"
+          ></textarea>
+          <button type="submit" id="add">Add</button>
+        </form>
+      </div>
     </div>
     <script src="script.js"></script>
   </body>
