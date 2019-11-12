@@ -12,7 +12,21 @@ let tasks = [
     completed: false
   }
 ];
-/*function name() {
-    console.log("hi");
+
+(function(arrTasks) {
+  const objectOfTasks = arrTasks.reduce((acc, task) => {
+    acc[task.id] = task;
+    return acc;
+  }, {});
+  console.log("objectOfTasks", objectOfTasks);
+  function renderAllTasks(taskList) {
+    Object.values(taskList).forEach(task => {
+      console.log(task);
+      const li = listItem(task);
+    });
   }
-  name();*/
+  function listItem({ id, title, text }) {
+    console.log(id, title, text);
+  }
+  renderAllTasks(objectOfTasks);
+})(tasks);

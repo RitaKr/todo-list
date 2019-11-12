@@ -6,14 +6,21 @@
 header {
   margin: 0 0px;
   padding: 20px 20px 20px 60px;
-  background: linear-gradient(to bottom right, #9b5570, #9b5570);
+  background: linear-gradient(to bottom right, #71c0df, #3a4569);
   border-bottom: solid 5px white;
 }
 h1 {
   padding: 0;
   font-size: 3em;
-  color: white;
-  text-shadow: 0px 3px 6px rgba(255, 255, 255, 2);
+  color: transparent;
+  background: linear-gradient(to bottom, transparent, white 80%);
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -ms-background-clip: text;
+  /*text-shadow: 0px 3px 6px rgba(255, 255, 255, 2);*/
+}
+.small {
+  font-size: 0.3em;
 }
 h3 {
   padding: 0;
@@ -37,7 +44,6 @@ input[type="text"] {
 }
 input[type="text"]:focus {
   outline: none;
-  border: 2px #9b5570 solid;
 }
 textarea {
   display: block;
