@@ -21,10 +21,14 @@ let tasks = [
   console.log("objectOfTasks", objectOfTasks);
 
   function renderAllTasks(taskList) {
+    const fragment = document.createDocumentFragment();
     Object.values(taskList).forEach(task => {
       console.log(task);
       const li = listItem(task);
-      console.log(li);
+      fragment.appendChild(li);
+      const list = document.querySelector(".list");
+      list.appendChild(fragment);
+      //console.log(li);
     });
   }
   function listItem({ id, title, text }) {
@@ -32,9 +36,9 @@ let tasks = [
     const li = document.createElement("li");
     li.classList.add("item");
 
-    const h3 = document.createElement("h3");
-    h3.classList.add("title");
-    h3.textContent = title;
+    const h2 = document.createElement("h2");
+    h2.classList.add("title");
+    h2.textContent = title;
 
     const p = document.createElement("p");
     p.classList.add("article");
@@ -44,10 +48,22 @@ let tasks = [
     button.textContent = "Delete task";
     button.classList.add("btn");
 
-    li.appendChild(h3);
+    li.appendChild(h2);
     li.appendChild(p);
     li.appendChild(button);
     return li;
   }
+  const form = document.querySelector(".form");
+  const inputTitle = document.querySelector(".inputTitle");
+  const inputBody = document.querySelector(".inputBody");
+  function onFormSubmit(event) {
+    event.preventDefault();
+    console.log(event);
+    const titleValue = inputTitle.value;
+    console.log(titleValue);
+    const bodyValue = inputBody.value;
+    console.log(bodyValue);
+  }
+  form.addEventListener("submit", onFormSubmit);
   renderAllTasks(objectOfTasks);
 })(tasks);

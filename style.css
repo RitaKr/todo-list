@@ -22,9 +22,15 @@ h1 {
 .small {
   font-size: 0.3em;
 }
-h3 {
+header h3 {
   padding: 0;
   font-size: 1.25em;
+  color: white;
+}
+.list-div {
+  margin: 0;
+  padding: 20px 80px;
+  background: #283972;
   color: white;
 }
 .main {
@@ -36,9 +42,10 @@ h3 {
   flex-direction: column;
 }
 input[type="text"] {
-  padding: 10px;
+  padding: 10px 10px 10px 0;
   background: none;
   color: #e7796b;
+  font-size: 1.2em;
   border: 2px transparent dotted;
   border-bottom: 2px #e7796b dotted;
 }
