@@ -6,7 +6,7 @@
 header {
   margin: 0 0px;
   padding: 20px 20px 20px 60px;
-  background: linear-gradient(to bottom right, #71c0df, #3a4569);
+  background: linear-gradient(to right, #399ac0, #927bd3);
   border-bottom: solid 5px white;
 }
 h1 {
@@ -31,16 +31,16 @@ h3 {
   margin: 0;
   padding: 20px 80px;
   background: white;
-  border-top: solid 5px #3a4569;
+  border-top: solid 5px #283972;
   display: flex;
   flex-direction: column;
 }
 input[type="text"] {
   padding: 10px;
   background: none;
-  color: #9b5570;
+  color: #e7796b;
   border: 2px transparent dotted;
-  border-bottom: 2px #9b5570 dotted;
+  border-bottom: 2px #e7796b dotted;
 }
 input[type="text"]:focus {
   outline: none;
@@ -49,18 +49,18 @@ textarea {
   display: block;
   margin: 15px 0px;
   padding: 10px;
-  border: 1px #9b5570 solid;
+  border: 1px #e7796b solid;
 }
 input[type="text"]::placeholder,
 textarea::placeholder {
-  color: #9b557088;
+  color: #e7796b88;
 }
 #add {
   padding: 10px 30px;
-  border: solid 3px #9b5570;
+  border: solid 3px #e7796b;
   background: none;
   border-radius: 18px;
-  color: #9b5570;
+  color: #e7796b;
   font-weight: bold;
   font-size: 1em;
 }
@@ -72,25 +72,25 @@ textarea::placeholder {
 }
 @keyframes back {
   from {
-    background: linear-gradient(to right, #9b5570 20%, transparent 20%);
+    background: linear-gradient(to right, #e7796b 20%, transparent 20%);
   }
   20% {
-    background: linear-gradient(to right, #9b5570 40%, transparent 40%);
+    background: linear-gradient(to right, #e7796b 40%, transparent 40%);
   }
   40% {
-    background: linear-gradient(to right, #9b5570 60%, transparent 60%);
+    background: linear-gradient(to right, #e7796b 60%, transparent 60%);
     color: white;
   }
   60% {
-    background: linear-gradient(to right, #9b5570 80%, transparent 80%);
+    background: linear-gradient(to right, #e7796b 80%, transparent 80%);
     color: white;
   }
   80% {
-    background: linear-gradient(to right, #9b5570 100%, transparent 100%);
+    background: linear-gradient(to right, #e7796b 100%, transparent 100%);
     color: white;
   }
   to {
-    background: linear-gradient(to right, #9b5570 100%, transparent 100%);
+    background: linear-gradient(to right, #e7796b 100%, transparent 100%);
     color: white;
   }
 }
