@@ -56,13 +56,34 @@ let tasks = [
   const form = document.querySelector(".form");
   const inputTitle = document.querySelector(".inputTitle");
   const inputBody = document.querySelector(".inputBody");
+
   function onFormSubmit(event) {
     event.preventDefault();
-    console.log(event);
     const titleValue = inputTitle.value;
-    console.log(titleValue);
     const bodyValue = inputBody.value;
-    console.log(bodyValue);
+
+    if (!bodyValue || !titleValue || bodyValue === " " || titleValue === " ") {
+      alert("Enter value");
+    }
+
+    const task = createNewTask(bodyValue, titleValue);
+    const listItems = listItem(task);
+    //fragment.appendChild(li);
+    //list.appendChild(listItems);
+    const list = document.querySelector(".list");
+    list.insertAdjacentElement("afterbegin", listItems);
+
+    function createNewTask(body, title) {
+      const newTask = {
+        title: title,
+        text: body,
+        completed: false,
+        id: "task" + Math.random()
+      };
+      //console.log(newTask);
+      objectOfTasks[newTask.id] = newTask;
+      return { ...newTask };
+    }
   }
   form.addEventListener("submit", onFormSubmit);
   renderAllTasks(objectOfTasks);
