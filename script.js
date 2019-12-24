@@ -26,7 +26,9 @@ let tasks = [
       console.log(task);
       const li = listItem(task);
       fragment.appendChild(li);
-      
+
+      const list = document.querySelector(".list");
+
       list.appendChild(fragment);
       //console.log(li);
     });
@@ -35,7 +37,10 @@ let tasks = [
     //console.log(id, title, text);
     const li = document.createElement("li");
     li.classList.add("item");
+
     li.setAttribute('data-task-id', id);
+
+
     const h2 = document.createElement("h2");
     h2.classList.add("title");
     h2.textContent = title;
@@ -56,7 +61,9 @@ let tasks = [
   const form = document.querySelector(".form");
   const inputTitle = document.querySelector(".inputTitle");
   const inputBody = document.querySelector(".inputBody");
+
   const list = document.querySelector(".list");
+
 
   function onFormSubmit(event) {
     event.preventDefault();
@@ -71,7 +78,7 @@ let tasks = [
     const listItems = listItem(task);
     //fragment.appendChild(li);
     //list.appendChild(listItems);
-    const list = document.querySelector(".list");
+    //const list = document.querySelector(".list");
     list.insertAdjacentElement("afterbegin", listItems);
 
     function createNewTask(body, title) {
@@ -88,6 +95,7 @@ let tasks = [
   }
   form.addEventListener("submit", onFormSubmit);
   renderAllTasks(objectOfTasks);
+
 
   function deleteTask(id) {
     const isConfirm = confirm('Do you really wanna delete "'+objectOfTasks[id].title+'"?')
@@ -109,5 +117,6 @@ let tasks = [
     }
   }
   list.addEventListener('click', onDeleteHandler)
+
 
 })(tasks);
