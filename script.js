@@ -23,7 +23,7 @@ let tasks = [
   const themes = {
     default: {
       "--background": "white",
-      "--text-color": "black"
+      "--text-color": "#6b96e7"
     },
     dark: {
       "--background": "#22243f",
@@ -32,15 +32,29 @@ let tasks = [
   };
   const themeSelect = document.getElementById("theme-select");
   themeSelect.addEventListener("change", onThemeSelectChange);
+  Object.entries(themes[themeSelect.value]).forEach(([key, value]) => {
+    console.log(key, value);
+    document.documentElement.style.setProperty(key, value);
+    localStorage.setItem(key, value);
+  });
+
   function onThemeSelectChange() {
     const selectedTheme = themeSelect.value;
+
     const isConfirm = confirm("are you sure?");
     if (!isConfirm) return;
     setTheme(selectedTheme);
+  }
+  function setTheme(name) {
+    console.log(name);
+    const selectedThemeObj = themes[name];
+    console.log(Object.entries(selectedThemeObj));
 
-    function setTheme(name) {
-      console.log(name);
-    }
+    Object.entries(selectedThemeObj).forEach(([key, value]) => {
+      console.log(key, value);
+      document.documentElement.style.setProperty(key, value);
+      localStorage.setItem(key, value);
+    });
   }
   function renderAllTasks(taskList) {
     const fragment = document.createDocumentFragment();

@@ -67,6 +67,7 @@ textarea {
   margin: 15px 0px;
   padding: 10px;
   border: 1px #6b96e7 solid;
+  background: none;
 }
 input[type="text"]::placeholder,
 textarea::placeholder {
@@ -143,7 +144,16 @@ textarea::placeholder {
     color: white;
   }
 }
-html/*div.main*/ {
+
+div.main {
   background: var(--background);
-  color: var(--font-color);
+  color: var(--text-color);
+  border-color: var(--text-color);
+}
+/*header {
+  background: url("img/sky.jpg"), var(--text-color);
+}*/
+input[type="text"]::placeholder,
+textarea::placeholder {
+  color: var(--text-color);
 }
