@@ -1,5 +1,4 @@
-let tasks = [
-  {
+let tasks = [{
     id: 1,
     title: "Выучить JS",
     text: "Ходить на курсы. Делать домашки",
@@ -13,7 +12,7 @@ let tasks = [
   }
 ];
 
-(function(arrTasks) {
+(function (arrTasks) {
   const objectOfTasks = arrTasks.reduce((acc, task) => {
     acc[task.id] = task;
     return acc;
@@ -45,6 +44,7 @@ let tasks = [
     if (!isConfirm) return;
     setTheme(selectedTheme);
   }
+
   function setTheme(name) {
     console.log(name);
     const selectedThemeObj = themes[name];
@@ -56,6 +56,7 @@ let tasks = [
       localStorage.setItem(key, value);
     });
   }
+
   function renderAllTasks(taskList) {
     const fragment = document.createDocumentFragment();
     Object.values(taskList).forEach(task => {
@@ -67,7 +68,12 @@ let tasks = [
       //console.log(li);
     });
   }
-  function listItem({ id, title, text }) {
+
+  function listItem({
+    id,
+    title,
+    text
+  }) {
     //console.log(id, title, text);
     const li = document.createElement("li");
     li.classList.add("item");
@@ -80,13 +86,14 @@ let tasks = [
     p.classList.add("article");
     p.textContent = text;
 
-    const button = document.createElement("button");
-    button.textContent = "Delete task";
-    button.classList.add("btn");
 
+    const i = document.createElement('i');
+    i.classList.add('fas');
+    i.classList.add('fa-trash-alt');
     li.appendChild(h2);
     li.appendChild(p);
-    li.appendChild(button);
+    li.appendChild(i);
+
     return li;
   }
   const form = document.querySelector(".form");
@@ -101,6 +108,7 @@ let tasks = [
 
     if (!bodyValue || !titleValue || bodyValue === " " || titleValue === " ") {
       alert("Enter value");
+      return null
     }
 
     const task = createNewTask(bodyValue, titleValue);
@@ -119,7 +127,9 @@ let tasks = [
       };
       //console.log(newTask);
       objectOfTasks[newTask.id] = newTask;
-      return { ...newTask };
+      return {
+        ...newTask
+      };
     }
   }
   form.addEventListener("submit", onFormSubmit);
@@ -136,8 +146,9 @@ let tasks = [
       return isConfirm;
     }
   }
+
   function onDeleteHandler(event) {
-    if (event.target.classList.contains("btn")) {
+    if (event.target.classList.contains("fas")) {
       const parent = event.target.closest("[data-task-id]");
       console.log("parent", parent);
       const id = parent.dataset.taskId;
